@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Anniversary, My Love! ❤️</title>
+  <style>
+    :root { --primary-color:#ff6b81; --secondary-color:#ff4757; --bg-color:#fff0f3; --card-bg:#ffffff; --text-color:#2f3542; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif; background-color:var(--bg-color); color:var(--text-color); line-height:1.6; overflow-x:hidden; }
+    .heart-bg { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:-1; }
+    .heart { position:absolute; color:var(--primary-color); opacity:.6; animation:floatUp 8s infinite linear; }
+    @keyframes floatUp { 0%{transform:translateY(100vh) scale(.5);opacity:0;} 50%{opacity:.8;} 100%{transform:translateY(-10vh) scale(1.2);opacity:0;} }
+    header { min-height:80vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:20px; }
+    header h1 { font-size:3rem; color:var(--secondary-color); margin-bottom:15px; animation:fadeIn 2s ease-in-out; }
+    header p { font-size:1.3rem; color:#57606f; max-width:600px; }
+    .scroll-btn { margin-top:30px; padding:12px 25px; background-color:var(--primary-color); color:white; border:none; border-radius:25px; font-size:1rem; cursor:pointer; box-shadow:0 4px 15px rgba(255,107,129,.4); transition:all .3s ease; text-decoration:none; }
+    .scroll-btn:hover { background-color:var(--secondary-color); transform:translateY(-3px); }
+    section { max-width:900px; margin:40px auto; padding:20px; }
+    .section-title { text-align:center; font-size:2rem; color:var(--secondary-color); margin-bottom:30px; }
+    .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+    .card { background:var(--card-bg); border-radius:15px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,.05); transition:transform .3s ease; text-align:center; padding:20px; }
+    .card:hover { transform:translateY(-8px); }
+    .card-img { width:100%; height:200px; object-fit:cover; border-radius:10px; margin-bottom:15px; }
+    .card h3 { font-size:1.2rem; margin-bottom:10px; color:var(--secondary-color); }
+    .note-container { background:white; padding:30px; border-radius:20px; box-shadow:0 10px 25px rgba(0,0,0,.05); border-left:5px solid var(--primary-color); font-size:1.1rem; color:#4b6584; }
+    .reasons-box { text-align:center; background:white; padding:40px 20px; border-radius:20px; box-shadow:0 10px 25px rgba(0,0,0,.05); }
+    #reasonText { font-size:1.3rem; font-style:italic; color:var(--secondary-color); margin:20px 0; min-height:60px; }
+    footer { text-align:center; padding:30px; font-size:.9rem; color:#a4b0be; }
+    @keyframes fadeIn { from{opacity:0;transform:translateY(20px);} to{opacity:1;transform:translateY(0);} }
+  </style>
+</head>
+<body>
+  <div class="heart-bg" id="heartBg"></div>
+  <header>
+    <h1>Happy Anniversary, My Love! 💕</h1>
+    <p>Every single day with you feels like a beautiful dream. Thank you for being my favorite part of life.</p>
+    <a href="#memories" class="scroll-btn">Explore Our Story ✨</a>
+  </header>
+  <section id="memories">
+    <h2 class="section-title">Our Favorite Moments</h2>
+    <div class="gallery">
+      <div class="card"><img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=600&q=80" alt="First Date" class="card-img"><h3>Where It Began</h3><p>Remembering our very first date and the instant spark we felt.</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=600&q=80" alt="Adventures" class="card-img"><h3>Endless Adventures</h3><p>From late-night drives to quiet walks, every moment with you is special.</p></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=600&q=80" alt="Laughter" class="card-img"><h3>Endless Smiles</h3><p>Thank you for always making me laugh, even on my hardest days.</p></div>
+    </div>
+  </section>
+  <section id="letter">
+    <h2 class="section-title">A Little Note For You</h2>
+    <div class="note-container"><p>My Dearest,</p><br><p>Happy anniversary! Looking back on our time together, I feel so incredibly lucky to have you by my side. You bring so much joy, kindness, and warmth into my world. Thank you for being my confidante, my best friend, and my favorite person.</p><br><p>I can't wait to create a million more wonderful memories together.</p><br><p>Forever & Always,<br><strong>[Your Name]</strong></p></div>
+  </section>
+  <section id="reasons">
+    <div class="reasons-box"><h2 class="section-title" style="margin-bottom:10px;">Why I Love You</h2><p style="color:#747d8c;">Click the button below to see one of the many reasons!</p><div id="reasonText">"Click the button to find out..."</div><button class="scroll-btn" onclick="newReason()">Show Another Reason 💖</button></div>
+  </section>
+  <footer>Made with ❤️ just for you. Happy Anniversary!</footer>
+  <script>
+    const reasons=["Your laugh is my absolute favorite sound in the world.","The way your eyes light up when you talk about things you love.","How cozy and safe I feel whenever I am with you.","Your kindness towards everyone around you.","Because you make even the simplest days feel extraordinary.","The way you always know how to make me smile.","Because you are my best friend and my biggest supporter."];
+    function newReason(){const randomIndex=Math.floor(Math.random()*reasons.length);document.getElementById('reasonText').innerText=`"${reasons[randomIndex]}"`;}
+    const heartBg=document.getElementById('heartBg');
+    for(let i=0;i<20;i++){const heart=document.createElement('div');heart.classList.add('heart');heart.innerText='❤️';heart.style.left=Math.random()*100+'vw';heart.style.animationDuration=(Math.random()*5+5)+'s';heart.style.fontSize=(Math.random()*20+15)+'px';heartBg.appendChild(heart);}
+  </script>
+</body>
+</html>
