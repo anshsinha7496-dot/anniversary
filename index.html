@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Happy Anniversary, My Jaan! ❤️</title>
   <style>
-    /* Global Styles */
     :root {
       --primary-color: #ff6b81;
       --secondary-color: #ff4757;
@@ -13,216 +12,52 @@
       --card-bg: #ffffff;
       --text-color: #2f3542;
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    /* Floating Hearts Background */
-    .heart-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: -1;
-    }
-
-    .heart {
-      position: absolute;
-      color: var(--primary-color);
-      opacity: 0.6;
-      animation: floatUp 8s infinite linear;
-    }
-
-    @keyframes floatUp {
-      0% {
-        transform: translateY(100vh) scale(0.5);
-        opacity: 0;
-      }
-      50% {
-        opacity: 0.8;
-      }
-      100% {
-        transform: translateY(-10vh) scale(1.2);
-        opacity: 0;
-      }
-    }
-
-    /* Hero Section */
-    header {
-      min-height: 80vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      color: var(--secondary-color);
-      margin-bottom: 15px;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    header p {
-      font-size: 1.3rem;
-      color: #57606f;
-      max-width: 600px;
-    }
-
-    .scroll-btn {
-      margin-top: 30px;
-      padding: 12px 25px;
-      background-color: var(--primary-color);
-      color: white;
-      border: none;
-      border-radius: 25px;
-      font-size: 1rem;
-      cursor: pointer;
-      box-shadow: 0 4px 15px rgba(255, 107, 129, 0.4);
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
-
-    .scroll-btn:hover {
-      background-color: var(--secondary-color);
-      transform: translateY(-3px);
-    }
-
-    /* Sections */
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2rem;
-      color: var(--secondary-color);
-      margin-bottom: 30px;
-    }
-
-    /* Memories Gallery Grid */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-    }
-
-    .card-img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    .card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: var(--secondary-color);
-    }
-
-    /* Love Note Section */
-    .note-container {
-      background: white;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      border-left: 5px solid var(--primary-color);
-      font-size: 1.1rem;
-      color: #4b6584;
-    }
-
-    /* Interactive Reasons Generator */
-    .reasons-box {
-      text-align: center;
-      background: white;
-      padding: 40px 20px;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    }
-
-    #reasonText {
-      font-size: 1.3rem;
-      font-style: italic;
-      color: var(--secondary-color);
-      margin: 20px 0;
-      min-height: 60px;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 0.9rem;
-      color: #a4b0be;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; overflow-x: hidden; }
+    .heart-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; }
+    .heart { position: absolute; color: var(--primary-color); opacity: 0.6; animation: floatUp 8s infinite linear; }
+    @keyframes floatUp { 0% { transform: translateY(100vh) scale(0.5); opacity: 0; } 50% { opacity: 0.8; } 100% { transform: translateY(-10vh) scale(1.2); opacity: 0; } }
+    header { min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; }
+    header h1 { font-size: 3rem; color: var(--secondary-color); margin-bottom: 15px; animation: fadeIn 2s ease-in-out; }
+    header p { font-size: 1.3rem; color: #57606f; max-width: 600px; }
+    .scroll-btn { margin-top: 30px; padding: 12px 25px; background-color: var(--primary-color); color: white; border: none; border-radius: 25px; font-size: 1rem; cursor: pointer; box-shadow: 0 4px 15px rgba(255, 107, 129, 0.4); transition: all 0.3s ease; text-decoration: none; }
+    .scroll-btn:hover { background-color: var(--secondary-color); transform: translateY(-3px); }
+    section { max-width: 900px; margin: 40px auto; padding: 20px; }
+    .section-title { text-align: center; font-size: 2rem; color: var(--secondary-color); margin-bottom: 30px; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: var(--card-bg); border-radius: 15px; overflow: hidden; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease; text-align: center; padding: 20px; }
+    .card:hover { transform: translateY(-8px); }
+    .card-img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
+    .card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--secondary-color); }
+    .note-container { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border-left: 5px solid var(--primary-color); font-size: 1.1rem; color: #4b6584; }
+    .reasons-box { text-align: center; background: white; padding: 40px 20px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+    #reasonText { font-size: 1.3rem; font-style: italic; color: var(--secondary-color); margin: 20px 0; min-height: 60px; }
+    footer { text-align: center; padding: 30px; font-size: 0.9rem; color: #a4b0be; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
   </style>
 </head>
 <body>
-
-  <!-- Floating Hearts Background -->
   <div class="heart-bg" id="heartBg"></div>
 
-  <!-- Hero Header -->
   <header>
     <h1>Happy Anniversary, My Jaan! 💕</h1>
     <p>Every single day with you feels like a beautiful dream, my Baby. Thank you for being my favorite person in the world, Tiyon.</p>
     <a href="#memories" class="scroll-btn">Explore Our Story ✨</a>
   </header>
 
-  <!-- Memories Section -->
   <section id="memories">
     <h2 class="section-title">Our Favorite Moments</h2>
     <div class="gallery">
       <div class="card">
-        <!-- Replace src with your image URL -->
         <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=600&q=80" alt="First Date" class="card-img">
         <h3>Where It Began</h3>
         <p>Remembering our very first date and the instant spark we felt, my Jaan.</p>
       </div>
-
       <div class="card">
         <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=600&q=80" alt="Late Night Talks" class="card-img">
         <h3>Endless Adventures</h3>
         <p>From our endless late night talks to quiet moments, every second with you is special, Baby.</p>
       </div>
-
       <div class="card">
         <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=600&q=80" alt="Laughter" class="card-img">
         <h3>Endless Smiles</h3>
@@ -231,18 +66,16 @@
     </div>
   </section>
 
-  <!-- Love Letter Section -->
   <section id="letter">
     <h2 class="section-title">A Little Note For You</h2>
     <div class="note-container">
       <p>My Dearest Jaan,</p><br>
-      <p>Happy anniversary, Baby! Looking back on our time together, I feel so incredibly lucky to have you by my side. You bring so much joy, kindness, and warmth into my world, my cute Tiyon. Thank you for being my confidante, my best friend, and my favorite person.</p><br>
+      <p>Happy anniversary, Baby! Looking back on our time together, I feel so incredibly lucky to have you by my side. You bring so much happiness, moja, and tension(baba call kortase tatri choloooo!!!!!ishhhhhhhhhhhhhhh) into my world, my cute Tiyon. Thank you for being my confidante, my best friend, and my favorite person.</p><br>
       <p>I can't wait to create a million more wonderful memories with you, Jaan.</p><br>
       <p>Forever & Always,<br><strong>mrigu tigu</strong></p>
     </div>
   </section>
 
-  <!-- Dynamic Interactive Reasons Section -->
   <section id="reasons">
     <div class="reasons-box">
       <h2 class="section-title" style="margin-bottom: 10px;">Why I Love You, Tiyon</h2>
@@ -252,13 +85,9 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    Made with ❤️ just for you, my Jaan. Happy Anniversary!
-  </footer>
+  <footer>Made with ❤️ just for you, my Jaan. Happy Anniversary!</footer>
 
   <script>
-    // List of cute reasons
     const reasons = [
       "Your laugh is my absolute favorite sound in the world, Jaan.",
       "The way your eyes light up when you talk about things you love, Baby.",
@@ -274,7 +103,6 @@
       document.getElementById('reasonText').innerText = `"${reasons[randomIndex]}"`;
     }
 
-    // Generate Floating Hearts
     const heartBg = document.getElementById('heartBg');
     for (let i = 0; i < 20; i++) {
       const heart = document.createElement('div');
